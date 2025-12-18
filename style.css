@@ -152,5 +152,10 @@ h1 {
   line-height: 1.6;
   animation: slideUp 0.8s ease;
 }
+  .card {
+  position: relative;
+  z-index: 2;
+}
+
 
 
