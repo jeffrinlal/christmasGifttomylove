@@ -80,3 +80,15 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+/* Secret Unlock */
+function unlockSecret() {
+  const input = document.getElementById("secretInput").value.toLowerCase();
+  const secret = "pattu"; // 🔑 SECRET PASSWORD
+
+  if (input === secret) {
+    document.getElementById("secretMessage").classList.remove("hidden");
+  } else {
+    alert("Not this one bebe 😌 try again ❤️");
+  }
+}
+
