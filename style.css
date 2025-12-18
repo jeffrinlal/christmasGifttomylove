@@ -1,53 +1,62 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  margin: 0;
-  min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   overflow-x: hidden;
 }
 
-/* Center container */
+/* FULL PAGE CENTER */
 .page {
+  width: 100%;
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   padding: 20px;
 }
 
-/* Main card */
+/* MAIN CARD */
 .card {
   width: 100%;
   max-width: 420px;
+
   padding: 30px;
   border-radius: 20px;
+
   background: rgba(255,255,255,0.12);
   backdrop-filter: blur(15px);
   box-shadow: 0 25px 50px rgba(0,0,0,0.4);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 
-  position: relative;
-  z-index: 2;
+  /* THIS LINE PREVENTS RIGHT SHIFT */
+  margin: 0 auto;
 }
 
+/* TEXT */
 .typing {
   min-height: 40px;
-  margin-bottom: 25px;
+  margin: 20px 0;
 }
 
-/* Gift */
+/* GIFT */
 .gift-box {
   font-size: 70px;
   cursor: pointer;
+  margin: 20px 0;
   animation: pulse 1.8s infinite;
 }
 
@@ -67,17 +76,16 @@ body {
   display: none;
 }
 
-/* Text */
+/* LOVE TEXT */
 .love-text {
-  margin-top: 25px;
   line-height: 1.7;
+  margin-top: 20px;
 }
 
-/* Countdown */
+/* COUNTDOWN */
 .countdown {
   margin-top: 25px;
   padding: 15px;
-  width: 100%;
   border-radius: 15px;
   background: rgba(255,255,255,0.15);
 }
@@ -87,11 +95,10 @@ body {
   margin-top: 10px;
 }
 
-/* Secret box */
+/* SECRET MESSAGE */
 .secret-box {
   margin-top: 25px;
   padding: 18px;
-  width: 100%;
   border-radius: 15px;
   background: rgba(255,255,255,0.15);
 
@@ -125,7 +132,7 @@ body {
   line-height: 1.6;
 }
 
-/* Gallery */
+/* PHOTOS */
 .gallery {
   margin-top: 25px;
   display: flex;
@@ -139,17 +146,12 @@ body {
   height: 130px;
   border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.3s;
 }
 
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-/* Fireworks */
+/* FIREWORKS */
 #fireworks {
   position: fixed;
   inset: 0;
-  z-index: 0;
   pointer-events: none;
+  z-index: -1;
 }
