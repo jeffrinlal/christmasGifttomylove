@@ -1,4 +1,4 @@
-/* Typing Effect */
+/* Typing effect */
 const text = "To my Danu (bebe)… even miles apart, you are my heart 🤍";
 let i = 0;
 
@@ -11,14 +11,14 @@ function typeEffect() {
 }
 typeEffect();
 
-/* Gift Open */
+/* Gift open */
 function openGift() {
   document.querySelector(".gift-box").style.display = "none";
   document.getElementById("surprise").classList.remove("hidden");
   startFireworks();
 }
 
-/* Countdown to April 2 */
+/* Countdown */
 const meetDate = new Date("April 2, 2026 00:00:00").getTime();
 
 setInterval(() => {
@@ -31,16 +31,29 @@ setInterval(() => {
   }
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const hrs = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const mins = Math.floor((diff / (1000 * 60)) % 60);
 
   document.getElementById("timer").innerHTML =
-    `${days} Days ${hours} Hrs ${mins} Min`;
+    `${days} Days ${hrs} Hrs ${mins} Min`;
 }, 1000);
+
+/* Secret unlock */
+function unlockSecret() {
+  const input = document.getElementById("secretInput").value.toLowerCase();
+  const secret = "pattu";
+
+  if (input === secret) {
+    document.getElementById("secretMessage").classList.remove("hidden");
+  } else {
+    alert("Not this one bebe 😌 try again ❤️");
+  }
+}
 
 /* Fireworks */
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
+
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
@@ -80,15 +93,3 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
-/* Secret Unlock */
-function unlockSecret() {
-  const input = document.getElementById("secretInput").value.toLowerCase();
-  const secret = "pattu"; // 🔑 SECRET PASSWORD
-
-  if (input === secret) {
-    document.getElementById("secretMessage").classList.remove("hidden");
-  } else {
-    alert("Not this one bebe 😌 try again ❤️");
-  }
-}
-
