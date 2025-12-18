@@ -11,10 +11,21 @@ html, body {
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
   overflow-x: hidden;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  transition: background 1.5s ease-in-out; /* ⭐ smooth change */
 }
+
 
 /* FULL PAGE CENTER */
 .page {
@@ -155,3 +166,9 @@ body {
   pointer-events: none;
   z-index: -1;
 }
+body.after-gift {
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/background2.jpg");
+}
+
